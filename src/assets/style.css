@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 0 0% 100%;
+  --foreground: 222 47% 12%;
+  --primary: 260 90% 55%; /* 鲜艳紫蓝 */
+  --primary-foreground: 0 0% 100%;
+  --secondary: 200 85% 92%; /* 清亮浅蓝背景 */
+  --secondary-foreground: 222 47% 12%;
+  --border: 214.3 31.8% 91.4%;
+  --input: 214.3 31.8% 91.4%;
+  --ring: 260 90% 55%;
+  --radius: 0.5rem;
+}
+
+.dark {
+  --background: 222 47% 12%;
+  --foreground: 0 0% 100%;
+  --primary: 292 90% 60%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 230 60% 22%;
+  --secondary-foreground: 0 0% 100%;
+}
+
+/* 渐变与玻璃风辅助类 */
+.btn-gradient {
+  background-image: linear-gradient(135deg, hsl(260 90% 55%), hsl(296 90% 60%));
+}
+.glass {
+  background: hsl(var(--background)/0.7);
+  backdrop-filter: saturate(150%) blur(6px);
+}

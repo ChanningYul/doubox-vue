@@ -1,0 +1,2 @@
+export const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'https://doubox-api.aiweb3.online'
+export const FREE_API_KEY = import.meta.env.VITE_FREE_API_KEY || '755cc816-b6ec-4f02-9232-4eac1f2f3c40'
