@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://doubox.aiweb3.online/sitemap.xml
