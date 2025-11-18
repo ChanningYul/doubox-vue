@@ -27,7 +27,12 @@
           </video>
           <div v-if="videoError" class="mt-2 text-xs text-red-500">预览失败，请尝试“去下载”在新页面播放</div>
           <div class="mt-2 flex gap-2">
-            <SecondaryButton @click="openDownload">去下载</SecondaryButton>
+            <a
+              :href="result.clean_video_url"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="px-4 py-2 rounded-xl bg-secondary text-secondary-foreground border border-white/40 transition hover:brightness-95 active:brightness-90 focus:outline-none focus:ring-2 focus:ring-primary/50"
+            >去下载</a>
           </div>
         </div>
         <div class="pt-2 border-t border-border">
@@ -92,10 +97,8 @@ function reset() {
   input.value = ''
   result.value = null
 }
-function openDownload() {
-  if (!result.value) return
-  window.open(result.value.clean_video_url, '_blank')
-}
+// 已改为使用 <a target="_blank">，保留此占位以避免未使用报错
+function openDownload() {}
 function onVideoError() {
   videoError.value = true
 }
