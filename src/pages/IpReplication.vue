@@ -10,6 +10,10 @@
       </template>
     </Card>
     <Loader v-if="loading">正在分析…</Loader>
+    <div class="space-y-2">
+      <p class="text-center text-xs text-gray-600">您领红包，作者得奖励</p>
+      <AlipayCoupon />
+    </div>
     <Modal :open="open" @update:open="v => open = v">
       <div class="space-y-2">
         <p class="font-medium">分析结果</p>
@@ -26,6 +30,7 @@ import SecondaryButton from '@/components/SecondaryButton.vue'
 import Modal from '@/components/Modal.vue'
 import Card from '@/components/Card.vue'
 import Loader from '@/components/Loader.vue'
+import AlipayCoupon from '@/components/AlipayCoupon.vue'
 const input = ref('')
 const loading = ref(false)
 const open = ref(false)

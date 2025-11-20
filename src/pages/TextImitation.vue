@@ -18,6 +18,10 @@
       </template>
     </Card>
     <Loader v-if="loading">正在生成仿写文本</Loader>
+    <div class="space-y-2">
+      <p class="text-center text-xs text-gray-600">您领红包，作者得奖励</p>
+      <AlipayCoupon />
+    </div>
   </main>
 </template>
 <script setup lang="ts">
@@ -29,6 +33,7 @@ import PrimaryButton from '@/components/PrimaryButton.vue'
 import SecondaryButton from '@/components/SecondaryButton.vue'
 import Card from '@/components/Card.vue'
 import Loader from '@/components/Loader.vue'
+import AlipayCoupon from '@/components/AlipayCoupon.vue'
 import { useToast } from '@/composables/useToast'
 const input = ref('')
 const result = ref('')
